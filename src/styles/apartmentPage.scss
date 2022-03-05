@@ -1,0 +1,106 @@
+@import "variables.scss";
+
+.apartment {
+  display: flex;
+  justify-content: space-between;
+  &Info {
+    &Title {
+      color: $primary;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 142.6%;
+    }
+    &Location {
+      color: $primary;
+      font-weight: 500;
+      font-size: 18px;
+      margin-top: 0px;
+    }
+  }
+  &Host {
+    display: flex;
+    margin-bottom: 18px;
+    justify-content: flex-end;
+    align-items: center;
+    &Name {
+      display: flex;
+      flex-direction: column;
+      color: $primary;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 142.6%;
+      margin-right: 10px;
+    }
+    &Img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+    }
+    &Rating {
+      & img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+.dropdown {
+  flex-basis: 47%;
+}
+.list {
+  background-color: $white;
+  flex-basis: 47%;
+}
+
+@media screen and (max-width: 768px) {
+  .dropdown,
+  .list {
+    flex-basis: 100%;
+  }
+
+  .apartment {
+    flex-direction: column;
+    &Name {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      margin-top: 16px;
+      align-items: center;
+    }
+    &Info {
+      &Title {
+        font-size: 18px;
+      }
+      &Location {
+        margin-top: 5px;
+        font-size: 14px;
+      }
+    }
+    &Host {
+      margin-bottom: 0;
+      &Name {
+        font-size: 12px;
+        // span {
+        // }
+      }
+      &Rating {
+        & img {
+          width: 15px;
+          height: 15px;
+        }
+      }
+      &Img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}

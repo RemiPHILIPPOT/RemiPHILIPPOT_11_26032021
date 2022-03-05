@@ -1,0 +1,66 @@
+@import "variables.scss";
+
+.carousel {
+  position: relative;
+  margin-bottom: 2em;
+  &Img {
+    height: 415px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+  &ArrowLeft {
+    position: absolute;
+    width: 46px;
+    height: 79px;
+    left: 23px;
+    top: 156px;
+  }
+  &ArrowRight {
+    transform: rotate(180deg);
+    position: absolute;
+    width: 46px;
+    height: 79px;
+    right: 23px;
+    top: 156px;
+  }
+  &Counter {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    color: white;
+    user-select: none;
+  }
+}
+
+.carouselArrowLeft:hover,
+.carouselArrowRight:hover {
+  filter: invert(37%) sepia(93%) saturate(7471%) hue-rotate(356deg)
+    brightness(91%) contrast(135%);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel {
+    margin-bottom: 10px;
+    &Img {
+      height: 255px;
+      border-radius: 10px;
+    }
+    &ArrowLeft {
+      width: 11px;
+      height: 19px;
+      top: 118px;
+      left: 7px;
+    }
+    &ArrowRight {
+      width: 11px;
+      height: 19px;
+      top: 118px;
+      right: 7px;
+    }
+    &Counter {
+      display: none;
+    }
+  }
+}

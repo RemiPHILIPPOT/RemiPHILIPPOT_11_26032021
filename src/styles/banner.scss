@@ -1,0 +1,42 @@
+@import "variables.scss";
+
+.banner {
+  position: relative;
+  margin-bottom: 40px;
+  &Img {
+    width: 100%;
+    height: 223px;
+    border-radius: 25px;
+    object-fit: cover;
+    filter: brightness(0.7);
+  }
+  &Title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 46px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: $white;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    margin-bottom: 0px;
+    &Img {
+      height: 111px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    &Title {
+      font-size: 24px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      color: $white;
+      transform: translate(-90%, -50%);
+    }
+  }
+}

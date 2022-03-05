@@ -1,0 +1,29 @@
+@import "variables.scss";
+
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  
+}
+
+main,
+header {
+  padding: 0px 20px;
+  max-width: 1240px;
+  margin: auto;
+}
+
+h2 {
+  margin: 0;
+}
